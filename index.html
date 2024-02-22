@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
@@ -11,57 +11,38 @@
 
 
     <div class="result"></div>
-
-
-   <div class="Tabel-con">
-
     <table>
-
         <tr>
-            <td>C</td>
-            <td>÷</td>
-            <td>%</td>
-            <td>Lo</td>
+            <td class="delete" onclick=" clearDisplay('Lo')">C</td>
+            <td class="special"onclick=" appendToDisplay('/')">÷</td>
+            <td class="special"onclick=" appendToDisplay('%')">%</td>
+            <td class="delete" onclick="deleteLast()"><img src="/img/löschen.png"></td>
         </tr>
-
-        
         <tr>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
-            <td>X</td>
+            <td class="numbers"onclick=" appendToDisplay('7')">7</td>
+            <td class="numbers"onclick=" appendToDisplay('8')">8</td>
+            <td class="numbers"onclick=" appendToDisplay('9')">9</td>
+            <td class="special"onclick=" appendToDisplay('*')">X</td>
         </tr>
-
-        
         <tr>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td>-</td>
+            <td class="numbers"onclick=" appendToDisplay('4')">4</td>
+            <td class="numbers"onclick=" appendToDisplay('5')">5</td>
+            <td class="numbers"onclick=" appendToDisplay('6')">6</td>
+            <td class="special"onclick=" appendToDisplay('-')">-</td>
         </tr>
-
-        
         <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>+</td>
+            <td class="numbers" onclick="appendToDisplay('1')">1</td>
+            <td class="numbers" onclick="appendToDisplay('2')">2</td>
+            <td class="numbers" onclick="appendToDisplay('3')">3</td>
+            <td class="special" onclick="appendToDisplay('+')">+</td>
         </tr>
-
-         
         <tr>
-            <td>+/-</td>
-            <td>0</td>
-            <td>,</td>
-            <td>=</td>
+            <td class="special" onclick="appendToDisplay('+/-')" >+/-</td> 
+            <td class="numbers" onclick="appendToDisplay('0')">0</td> 
+            <td class="special" onclick="appendToDisplay('.')">,</td>
+            <td class="special" onclick="calculate('')">=</td>
         </tr>
-
-        
-
-
-
     </table>
-
 
 
 </div>
